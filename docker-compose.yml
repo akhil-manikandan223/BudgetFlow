@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    container_name: budgetflow_db
+    restart: always
+    environment:
+      POSTGRES_USER: budgetflow_user
+      POSTGRES_PASSWORD: budgetflow_pass
+      POSTGRES_DB: budgetflow_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
