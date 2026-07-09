@@ -8,6 +8,7 @@ import os
 from dotenv import load_dotenv
 from app.core.database import Base
 from app.models.expense import Expense  # ensures the model is registered
+from app.models.user import User
 
 load_dotenv()
 
